@@ -23,7 +23,9 @@ Starting from three acceleration components, time evolutions of the Antero-Poste
 </font> 
 
 $$ DAP = H_1{ A_z\over \sqrt{{A_y}^2+{A_x}^2}} $$
+
 $$ DML = H_2{ A_x\over \sqrt{{A_y}^2+{A_z}^2}} $$
+
 H<sub>1</sub> and H<sub>2</sub> are the distance between the sensor node and the bottom joint (on the floor) and the belt joint respectively.
 
 
