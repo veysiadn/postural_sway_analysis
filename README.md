@@ -38,3 +38,22 @@ The dataset is organized as follows:
  
 Plotting DAP against DML you can find the stabilogram for each dynamic, and then you can save as images to be used for training and testing AI classification tool.
 If you prefer stabilograms centered around zero DAP-DML values, you have just to remove the mean value from time-series.
+
+To be able to run the code, you need to install the following libraries:
+```sh 
+
+matplotlib==3.6.2
+numpy==1.21.5
+pandas==1.4.2
+pycaret==3.0.0rc4
+scikit_learn==1.2.0
+scipy==1.7.3
+tensorflow==2.10.0
+tensorflow_text==2.11.0
+
+```
+
+To install the libraries, you can use the following command:
+```sh
+pip install -r requirements.txt
+```
