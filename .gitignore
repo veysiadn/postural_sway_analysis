@@ -1,1 +1,7 @@
 logs.log
+test-c
+postural_sway_random_forest.h
+postural_sway_test.c
+tmp/
+my-test.h
+.vscode/
