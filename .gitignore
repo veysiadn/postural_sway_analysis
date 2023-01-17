@@ -5,3 +5,5 @@ postural_sway_test.c
 tmp/
 my-test.h
 .vscode/
+dense_model_quantized.cc
+dense_model.cc
