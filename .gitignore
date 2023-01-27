@@ -7,3 +7,4 @@ my-test.h
 .vscode/
 dense_model_quantized.cc
 dense_model.cc
+catboost_info/
