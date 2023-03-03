@@ -1,0 +1,146 @@
+Profiling Summary
+Name: dense_model
+Accelerator: None
+Input Shape: 1x900
+Input Data Type: float32
+Output Shape: 1x4
+Output Data Type: float32
+Flash, Model File Size (bytes): 183.2k
+RAM, Runtime Memory Size (bytes): 4.8k
+Operation Count: 90.6k
+Multiply-Accumulate Count: 45.2k
+Layer Count: 4.0
+Unsupported Layer Count: 0
+CPU Cycle Count: 181.3k
+CPU Utilization (%): 100.0
+Clock Rate (hz): 80.0M
+Time (s): 2.3m
+Energy (J): 1.3u
+J/Op: 14.8p
+J/MAC: 29.6p
+Ops/s: 40.0M
+MACs/s: 20.0M
+Inference/s: 441.3
+
+Layer Summary
+.---------------------------------------------------------------------------------------------------------------------------------------.
+| Layer Index |     OpCode      | # Ops | # MACs | # CPU Cycles | Energy(J) | Time(s) |     Inputs      | Outputs |       Options       |
+|-------------|-----------------|-------|--------|--------------|-----------|---------|-----------------|---------|---------------------|
+| 0           | fully_connected | 90.2k | 45.0k  | 174.1k       | 1.3u      | 2.2m    | 1x900,50x900,50 | 1x50    | Activation:relu     |
+| 1           | fully_connected | 412.0 | 200.0  | 1.8k         | 17.5n     | 22.6u   | 1x50,4x50,4     | 1x4     | Activation:relu     |
+| 2           | fully_connected | 36.0  | 16.0   | 1.2k         | 17.5n     | 15.1u   | 1x4,4x4,4       | 1x4     | Activation:none     |
+| 3           | softmax         | 20.0  | 0      | 4.1k         | 16.5n     | 51.8u   | 1x4             | 1x4     | Type=softmaxoptions |
+'---------------------------------------------------------------------------------------------------------------------------------------'
+
+NANO BLE SENSE 33 - ARM CORTEX M4
+Average inference time : 8222.79 microseconds
+STD of inference time  : 43.76 microseconds
+Max inference time     : 8359 microseconds
+Min inference time     : 8117 microseconds
+4572 bytes used.
+Recognized val_0 = 0.0000
+Recognized val_1 = 0.0000
+Recognized val_2 =0.0002
+Recognized val_3 =0.9998
+
+
+RP2040 - ARM CORTEX M0+
+Average inference time : 124096.58 microseconds
+STD of inference time  : 4976.29 microseconds
+Max inference time     : 235236 microseconds
+Min inference time     : 123712 microseconds
+4575 bytes used.
+Recognized val_0 = 0.0000
+Recognized val_1 = 0.0000
+Recognized val_2 =0.0002
+Recognized val_3 =0.9998
+
+'---------------------------------------------------------------------------------------------------------------------------------------'
+
+Profiling Summary
+Name: dense_model
+Accelerator: None
+Input Shape: 1x900
+Input Data Type: float32
+Output Shape: 1x4
+Output Data Type: float32
+Flash, Model File Size (bytes): 147.1k
+RAM, Runtime Memory Size (bytes): 4.8k
+Operation Count: 72.5k
+Multiply-Accumulate Count: 36.2k
+Layer Count: 4.0
+Unsupported Layer Count: 0
+CPU Cycle Count: 132.4k
+CPU Utilization (%): 100.0
+Clock Rate (hz): 80.0M
+Time (s): 1.7m
+Energy (J): 1.2u
+J/Op: 15.9p
+J/MAC: 32.0p
+Ops/s: 43.8M
+MACs/s: 21.9M
+Inference/s: 604.1
+
+Layer Summary
+.---------------------------------------------------------------------------------------------------------------------------------------.
+| Layer Index |     OpCode      | # Ops | # MACs | # CPU Cycles | Energy(J) | Time(s) |     Inputs      | Outputs |       Options       |
+|-------------|-----------------|-------|--------|--------------|-----------|---------|-----------------|---------|---------------------|
+| 0           | fully_connected | 72.1k | 36.0k  | 125.5k       | 1.1u      | 1.6m    | 1x900,40x900,40 | 1x40    | Activation:relu     |
+| 1           | fully_connected | 332.0 | 160.0  | 1.6k         | 17.5n     | 20.2u   | 1x40,4x40,4     | 1x4     | Activation:relu     |
+| 2           | fully_connected | 36.0  | 16.0   | 1.2k         | 17.5n     | 15.1u   | 1x4,4x4,4       | 1x4     | Activation:none     |
+| 3           | softmax         | 20.0  | 0      | 4.1k         | 16.5n     | 51.8u   | 1x4             | 1x4     | Type=softmaxoptions |
+'---------------------------------------------------------------------------------------------------------------------------------------'
+NANO BLE SENSE 33 - ARM CORTEX M4
+Average inference time : 6602.98 microseconds
+STD of inference time  : 79.15 microseconds
+Max inference time     : 7982 microseconds
+Min inference time     : 6427 microseconds
+4524 bytes used.
+Recognized val_0 = 0.0000
+Recognized val_1 = 0.0003
+Recognized val_2 =0.0094
+Recognized val_3 =0.9902
+
+'---------------------------------------------------------------------------------------------------------------------------------------'
+Profiling Summary
+Name: dense_model
+Accelerator: None
+Input Shape: 1x900
+Input Data Type: float32
+Output Shape: 1x4
+Output Data Type: float32
+Flash, Model File Size (bytes): 74.7k
+RAM, Runtime Memory Size (bytes): 4.6k
+Operation Count: 36.3k
+Multiply-Accumulate Count: 18.1k
+Layer Count: 4.0
+Unsupported Layer Count: 0
+CPU Cycle Count: 50.3k
+CPU Utilization (%): 100.0
+Clock Rate (hz): 80.0M
+Time (s): 629.3u
+Energy (J): 309.9n
+J/Op: 8.5p
+J/MAC: 17.1p
+Ops/s: 57.7M
+MACs/s: 28.8M
+Inference/s: 1.6k
+
+Layer Summary
+.---------------------------------------------------------------------------------------------------------------------------------------.
+| Layer Index |     OpCode      | # Ops | # MACs | # CPU Cycles | Energy(J) | Time(s) |     Inputs      | Outputs |       Options       |
+|-------------|-----------------|-------|--------|--------------|-----------|---------|-----------------|---------|---------------------|
+| 0           | fully_connected | 36.1k | 18.0k  | 43.6k        | 258.4n    | 545.3u  | 1x900,20x900,20 | 1x20    | Activation:relu     |
+| 1           | fully_connected | 172.0 | 80.0   | 1.4k         | 17.5n     | 17.0u   | 1x20,4x20,4     | 1x4     | Activation:relu     |
+| 2           | fully_connected | 36.0  | 16.0   | 1.2k         | 17.5n     | 15.1u   | 1x4,4x4,4       | 1x4     | Activation:none     |
+| 3           | softmax         | 20.0  | 0      | 4.1k         | 16.5n     | 51.8u   | 1x4             | 1x4     | Type=softmaxoptions |
+'---------------------------------------------------------------------------------------------------------------------------------------'
+Average inference time : 3384.58 microseconds
+STD of inference time  : 31.43 microseconds
+Max inference time     : 3486 microseconds
+Min inference time     : 3326 microseconds
+4444 bytes used.
+Recognized val_0 = 0.0000
+Recognized val_1 = 0.0000
+Recognized val_2 =0.0005
+Recognized val_3 =0.9995

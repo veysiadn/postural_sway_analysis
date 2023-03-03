@@ -1,0 +1,152 @@
+Profiling Summary
+Name: dense_model_quantized
+Accelerator: None
+Input Shape: 1x900
+Input Data Type: float32
+Output Shape: 1x4
+Output Data Type: float32
+Flash, Model File Size (bytes): 48.3k
+RAM, Runtime Memory Size (bytes): 5.7k
+Operation Count: 94.2k
+Multiply-Accumulate Count: 45.2k
+Layer Count: 6.0
+Unsupported Layer Count: 0
+CPU Cycle Count: 215.8k
+CPU Utilization (%): 100.0
+Clock Rate (hz): 80.0M
+Time (s): 2.7m
+Energy (J): 1.9u
+J/Op: 20.4p
+J/MAC: 42.5p
+Ops/s: 34.9M
+MACs/s: 16.8M
+Inference/s: 370.7
+
+Layer Summary
+.---------------------------------------------------------------------------------------------------------------------------------------.
+| Layer Index |     OpCode      | # Ops | # MACs | # CPU Cycles | Energy(J) | Time(s) |     Inputs      | Outputs |       Options       |
+|-------------|-----------------|-------|--------|--------------|-----------|---------|-----------------|---------|---------------------|
+| 0           | quantize        | 3.6k  | 0      | 33.1k        | 422.4n    | 413.7u  | 1x900           | 1x900   | Type=none           |
+| 1           | fully_connected | 90.2k | 45.0k  | 174.1k       | 1.3u      | 2.2m    | 1x900,50x900,50 | 1x50    | Activation:relu     |
+| 2           | fully_connected | 412.0 | 200.0  | 1.8k         | 17.5n     | 22.6u   | 1x50,4x50,4     | 1x4     | Activation:relu     |
+| 3           | fully_connected | 36.0  | 16.0   | 1.2k         | 17.5n     | 15.1u   | 1x4,4x4,4       | 1x4     | Activation:none     |
+| 4           | softmax         | 20.0  | 0      | 4.1k         | 16.5n     | 51.8u   | 1x4             | 1x4     | Type=softmaxoptions |
+| 5           | dequantize      | 8.0   | 0      | 1.4k         | 159.1n    | 17.5u   | 1x4             | 1x4     | Type=none           |
+'---------------------------------------------------------------------------------------------------------------------------------------'
+
+NANO BLE SENSE 33 - ARM CORTEX M4
+Average inference time : 5575.03 microseconds
+STD of inference time  : 13.04 microseconds
+Max inference time     : 5610 microseconds
+Min inference time     : 5539 microseconds
+5428 bytes used.
+Recognized val_0 = 0.0000
+Recognized val_1 = 0.0000
+Recognized val_2 =0.0000
+Recognized val_3 =0.9961
+
+RP2040 - ARM CORTEX M0+
+Average inference time : 15369.19 microseconds
+STD of inference time  : 3517.31 microseconds
+Max inference time     : 70993 microseconds
+Min inference time     : 15096 microseconds
+5439 bytes used.
+Recognized val_0 = 0.0000
+Recognized val_1 = 0.0000
+Recognized val_2 =0.0000
+Recognized val_3 =0.9961
+
+
+.---------------------------------------------------------------------------------------------------------------------------------------.Profiling Summary
+Name: dense_model_quantized
+Accelerator: None
+Input Shape: 1x900
+Input Data Type: float32
+Output Shape: 1x4
+Output Data Type: float32
+Flash, Model File Size (bytes): 39.3k
+RAM, Runtime Memory Size (bytes): 5.7k
+Operation Count: 76.1k
+Multiply-Accumulate Count: 36.2k
+Layer Count: 6.0
+Unsupported Layer Count: 0
+CPU Cycle Count: 166.9k
+CPU Utilization (%): 100.0
+Clock Rate (hz): 80.0M
+Time (s): 2.1m
+Energy (J): 1.7u
+J/Op: 22.8p
+J/MAC: 48.0p
+Ops/s: 36.5M
+MACs/s: 17.3M
+Inference/s: 479.2
+
+Layer Summary
+.---------------------------------------------------------------------------------------------------------------------------------------.
+| Layer Index |     OpCode      | # Ops | # MACs | # CPU Cycles | Energy(J) | Time(s) |     Inputs      | Outputs |       Options       |
+|-------------|-----------------|-------|--------|--------------|-----------|---------|-----------------|---------|---------------------|
+| 0           | quantize        | 3.6k  | 0      | 33.1k        | 422.4n    | 413.7u  | 1x900           | 1x900   | Type=none           |
+| 1           | fully_connected | 72.1k | 36.0k  | 125.5k       | 1.1u      | 1.6m    | 1x900,40x900,40 | 1x40    | Activation:relu     |
+| 2           | fully_connected | 332.0 | 160.0  | 1.6k         | 17.5n     | 20.2u   | 1x40,4x40,4     | 1x4     | Activation:relu     |
+| 3           | fully_connected | 36.0  | 16.0   | 1.2k         | 17.5n     | 15.1u   | 1x4,4x4,4       | 1x4     | Activation:none     |
+| 4           | softmax         | 20.0  | 0      | 4.1k         | 16.5n     | 51.8u   | 1x4             | 1x4     | Type=softmaxoptions |
+| 5           | dequantize      | 8.0   | 0      | 1.4k         | 159.1n    | 17.5u   | 1x4             | 1x4     | Type=none           |
+'---------------------------------------------------------------------------------------------------------------------------------------'
+NANO BLE SENSE 33 - ARM CORTEX M4
+
+Average inference time : 4874.00 microseconds
+STD of inference time  : 57.81 microseconds
+Max inference time     : 5914 microseconds
+Min inference time     : 4762 microseconds
+5428 bytes used.
+Recognized val_0 = 0.0000
+Recognized val_1 = 0.0000
+Recognized val_2 =0.0117
+Recognized val_3 =0.9883
+
+'---------------------------------------------------------------------------------------------------------------------------------------'
+Profiling Summary
+Name: dense_model_quantized
+Accelerator: None
+Input Shape: 1x900
+Input Data Type: float32
+Output Shape: 1x4
+Output Data Type: float32
+Flash, Model File Size (bytes): 21.1k
+RAM, Runtime Memory Size (bytes): 5.7k
+Operation Count: 39.9k
+Multiply-Accumulate Count: 18.1k
+Layer Count: 6.0
+Unsupported Layer Count: 0
+CPU Cycle Count: 84.8k
+CPU Utilization (%): 100.0
+Clock Rate (hz): 80.0M
+Time (s): 1.1m
+Energy (J): 891.4n
+J/Op: 22.3p
+J/MAC: 49.3p
+Ops/s: 37.6M
+MACs/s: 17.1M
+Inference/s: 942.9
+
+Layer Summary
+.---------------------------------------------------------------------------------------------------------------------------------------.
+| Layer Index |     OpCode      | # Ops | # MACs | # CPU Cycles | Energy(J) | Time(s) |     Inputs      | Outputs |       Options       |
+|-------------|-----------------|-------|--------|--------------|-----------|---------|-----------------|---------|---------------------|
+| 0           | quantize        | 3.6k  | 0      | 33.1k        | 422.4n    | 413.7u  | 1x900           | 1x900   | Type=none           |
+| 1           | fully_connected | 36.1k | 18.0k  | 43.6k        | 258.4n    | 545.3u  | 1x900,20x900,20 | 1x20    | Activation:relu     |
+| 2           | fully_connected | 172.0 | 80.0   | 1.4k         | 17.5n     | 17.0u   | 1x20,4x20,4     | 1x4     | Activation:relu     |
+| 3           | fully_connected | 36.0  | 16.0   | 1.2k         | 17.5n     | 15.1u   | 1x4,4x4,4       | 1x4     | Activation:none     |
+| 4           | softmax         | 20.0  | 0      | 4.1k         | 16.5n     | 51.8u   | 1x4             | 1x4     | Type=softmaxoptions |
+| 5           | dequantize      | 8.0   | 0      | 1.4k         | 159.1n    | 17.5u   | 1x4             | 1x4     | Type=none           |
+'---------------------------------------------------------------------------------------------------------------------------------------'
+
+Average inference time : 3489.71 microseconds
+STD of inference time  : 21.10 microseconds
+Max inference time     : 3577 microseconds
+Min inference time     : 3459 microseconds
+5428 bytes used.
+Recognized val_0 = 0.0000
+Recognized val_1 = 0.0000
+Recognized val_2 =0.0000
+Recognized val_3 =0.9961
