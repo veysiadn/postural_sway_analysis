@@ -9,3 +9,4 @@ dense_model_quantized.cc
 dense_model.cc
 catboost_info/
 TimeGAN_Synthetic_stock_data.ipynb
+__pycache__/
