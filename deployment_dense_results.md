@@ -33,13 +33,23 @@ Sketch uses 189992 bytes (19%) of program storage space. Maximum is 983040 bytes
 Global variables use 70624 bytes (26%) of dynamic memory, leaving 191520 bytes for local variables. Maximum is 262144 bytes.
 # ----------------------------------------------------------------------------------------------
 # Random Forest Deployment Results
-## Input Size = 1x900
-Average inference time : 36.19 microseconds
-STD of inference time  : 2.82 microseconds
-Max inference time     : 42 microseconds
-Min inference time     : 34 microseconds
 
-Sketch uses 95688 bytes (9%) of program storage space. Maximum is 983040 bytes.
+## Input Size = 1x200
+Average inference time : 48.05 microseconds
+STD of inference time  : 2.79 microseconds
+Max inference time     : 57 microseconds
+Min inference time     : 45 microseconds
+
+Sketch uses 100152 bytes (10%) of program storage space. Maximum is 983040 bytes.
+Global variables use 47984 bytes (18%) of dynamic memory, leaving 214160 bytes for local variables. Maximum is 262144 bytes.
+
+## Input Size = 1x400
+Average inference time : 41.83 microseconds
+STD of inference time  : 3.13 microseconds
+Max inference time     : 51 microseconds
+Min inference time     : 40 microseconds
+
+Sketch uses 99832 bytes (10%) of program storage space. Maximum is 983040 bytes.
 Global variables use 47984 bytes (18%) of dynamic memory, leaving 214160 bytes for local variables. Maximum is 262144 bytes.
 
 ## Input Size = 1x600
@@ -51,23 +61,13 @@ Min inference time     : 36 microseconds
 Sketch uses 101816 bytes (10%) of program storage space. Maximum is 983040 bytes.
 Global variables use 47984 bytes (18%) of dynamic memory, leaving 214160 bytes for local variables. Maximum is 262144 bytes.
 
-## Input Size = 1x400
+## Input Size = 1x900
+Average inference time : 36.19 microseconds
+STD of inference time  : 2.82 microseconds
+Max inference time     : 42 microseconds
+Min inference time     : 34 microseconds
 
-Average inference time : 41.83 microseconds
-STD of inference time  : 3.13 microseconds
-Max inference time     : 51 microseconds
-Min inference time     : 40 microseconds
-
-Sketch uses 99832 bytes (10%) of program storage space. Maximum is 983040 bytes.
-Global variables use 47984 bytes (18%) of dynamic memory, leaving 214160 bytes for local variables. Maximum is 262144 bytes.
-
-## Input Size = 1x200
-Average inference time : 48.05 microseconds
-STD of inference time  : 2.79 microseconds
-Max inference time     : 57 microseconds
-Min inference time     : 45 microseconds
-
-Sketch uses 97624 bytes (9%) of program storage space. Maximum is 983040 bytes.
+Sketch uses 106552 bytes (10%) of program storage space. Maximum is 983040 bytes.
 Global variables use 47984 bytes (18%) of dynamic memory, leaving 214160 bytes for local variables. Maximum is 262144 bytes.
 
 # Extra Trees Deployment Results
@@ -98,8 +98,7 @@ Max inference time     : 82 microseconds
 Min inference time     : 68 microseconds
 
 Sketch uses 104824 bytes (10%) of program storage space. Maximum is 983040 bytes.
-Global variables use 243984 bytes (93%) of dynamic memory, leaving 18160 bytes for local variables. Maximum is 262144 bytes.
-
+Global variables use 47984 bytes (18%) of dynamic memory, leaving 214160 bytes for local variables. Maximum is 262144 bytes.
 
 ## Input Size = 1x900
 
@@ -109,7 +108,7 @@ Max inference time     : 72 microseconds
 Min inference time     : 58 microseconds
 
 Sketch uses 107384 bytes (10%) of program storage space. Maximum is 983040 bytes.
-Global variables use 243984 bytes (93%) of dynamic memory, leaving 18160 bytes for local variables. Maximum is 262144 bytes.
+Global variables use 47984 bytes (18%) of dynamic memory, leaving 214160 bytes for local variables. Maximum is 262144 bytes.
 
 # Gaussian Naive Bayes Deployment Results
 ## Input Size = 1x200

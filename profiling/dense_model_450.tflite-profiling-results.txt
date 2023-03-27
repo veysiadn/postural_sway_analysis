@@ -1,0 +1,33 @@
+Profiling Summary
+Name: dense_model_450
+Accelerator: None
+Input Shape: 1x900
+Input Data Type: float32
+Output Shape: 1x4
+Output Data Type: float32
+Flash, Model File Size (bytes): 45.7k
+RAM, Runtime Memory Size (bytes): 4.6k
+Operation Count: 21.8k
+Multiply-Accumulate Count: 10.9k
+Layer Count: 4.0
+Unsupported Layer Count: 0
+CPU Cycle Count: 50.2k
+CPU Utilization (%): 100.0
+Clock Rate (hz): 80.0M
+Time (s): 627.2u
+Energy (J): 309.9n
+J/Op: 14.2p
+J/MAC: 28.5p
+Ops/s: 34.8M
+MACs/s: 17.3M
+Inference/s: 1.6k
+
+Layer Summary
+.---------------------------------------------------------------------------------------------------------------------------------------.
+| Layer Index |     OpCode      | # Ops | # MACs | # CPU Cycles | Energy(J) | Time(s) |     Inputs      | Outputs |       Options       |
+|-------------|-----------------|-------|--------|--------------|-----------|---------|-----------------|---------|---------------------|
+| 0           | fully_connected | 21.6k | 10.8k  | 43.6k        | 258.4n    | 544.8u  | 1x900,12x900,12 | 1x12    | Activation:relu     |
+| 1           | fully_connected | 108.0 | 48.0   | 1.2k         | 17.5n     | 15.5u   | 1x12,4x12,4     | 1x4     | Activation:relu     |
+| 2           | fully_connected | 36.0  | 16.0   | 1.2k         | 17.5n     | 15.1u   | 1x4,4x4,4       | 1x4     | Activation:none     |
+| 3           | softmax         | 20.0  | 0      | 4.1k         | 16.5n     | 51.8u   | 1x4             | 1x4     | Type=softmaxoptions |
+'---------------------------------------------------------------------------------------------------------------------------------------'
